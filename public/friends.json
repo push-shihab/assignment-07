@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Anika Sharma",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "anika.sharma@gmail.com",
+    "days_since_contact": 21,
+    "status": "overdue",
+    "tags": ["college", "close friend", "travel buddy"],
+    "bio": "Met during freshman orientation at university. We backpacked through Southeast Asia together after graduation. She's now a UX designer in Berlin.",
+    "goal": 14,
+    "next_due_date": "2026-04-10"
+  },
+  {
+    "id": 2,
+    "name": "Marcus Webb",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "marcus.webb@outlook.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["work", "mentor", "basketball"],
+    "bio": "Former manager who became a genuine friend. We play pickup basketball every few weekends and he gives great career advice over coffee.",
+    "goal": 10,
+    "next_due_date": "2026-04-21"
+  },
+  {
+    "id": 3,
+    "name": "Lena Hoffmann",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "lena.hoffmann@web.de",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["childhood", "close friend", "book club"],
+    "bio": "We grew up on the same street and have stayed close despite living in different countries. Monthly video calls and an annual trip to somewhere neither of us has been.",
+    "goal": 14,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 4,
+    "name": "Daniel Osei",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "email": "d.osei@yahoo.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["college", "roommate", "music"],
+    "bio": "My college roommate for three years. We bonded over jazz and late-night philosophy debates. He's a high school music teacher in Accra now and we've been terrible at keeping in touch.",
+    "goal": 21,
+    "next_due_date": "2026-03-31"
+  },
+  {
+    "id": 5,
+    "name": "Priya Nair",
+    "picture": "https://randomuser.me/api/portraits/women/21.jpg",
+    "email": "priya.nair@hotmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["neighbor", "close friend", "foodie"],
+    "bio": "Met at a cooking class two years ago and we've been testing restaurants around the city ever since. She introduced me to her whole social circle.",
+    "goal": 7,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 6,
+    "name": "Ryan Callahan",
+    "picture": "https://randomuser.me/api/portraits/men/55.jpg",
+    "email": "ryan.callahan@protonmail.com",
+    "days_since_contact": 28,
+    "status": "overdue",
+    "tags": ["high school", "gamer", "old friend"],
+    "bio": "Best friend from high school. We drifted during college but reconnected at a reunion. Now mostly catch up over online games and the occasional visit when he's in town.",
+    "goal": 21,
+    "next_due_date": "2026-04-02"
+  },
+  {
+    "id": 7,
+    "name": "Yuki Tanaka",
+    "picture": "https://randomuser.me/api/portraits/women/57.jpg",
+    "email": "yuki.t@icloud.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["work", "hiking", "close friend"],
+    "bio": "We met at a tech conference and realized we lived 10 minutes apart. Now we go on trail hikes every month and vent about industry nonsense together.",
+    "goal": 10,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 8,
+    "name": "Samuel Adeyemi",
+    "picture": "https://randomuser.me/api/portraits/men/14.jpg",
+    "email": "sam.adeyemi@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["college", "close friend", "startup"],
+    "bio": "Co-founded a failed startup together right after college — one of the best experiences of my life despite the outcome. Still brainstorm ideas over calls and genuinely root for each other.",
+    "goal": 14,
+    "next_due_date": "2026-04-24"
+  }
+]
