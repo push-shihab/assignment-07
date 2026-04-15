@@ -12,14 +12,15 @@ const Friend = ({ friend }) => {
         alt={friend.name}
         width={100}
         height={100}
+        loading="eager"
       ></Image>
       <h2 className="font-semibold text-[20px]">{friend.name}</h2>
       <p className="text-[#64748B] text-[12px]">
         {friend.days_since_contact}d ago
       </p>
-      <div className="uppercase text-[12px]">
+      <div className="uppercase text-[12px] flex flex-wrap items-center justify-center gap-1.5">
         {friend.tags.map((tag, i) => (
-          <span className="py-1 px-2 mr-2 rounded-xl bg-green-200" key={i}>
+          <span className="py-1 px-2 rounded-xl bg-green-200" key={i}>
             {tag}
           </span>
         ))}
