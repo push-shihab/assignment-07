@@ -6,11 +6,7 @@ const AllFriends = async () => {
   return (
     <div className="py-15">
       <h2 className="font-semibold text-2xl">Your Friends</h2>
-      <main className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-10 pt-8">
-        {friendsData.map((friend) => (
-          <Friend key={friend.id} friend={friend}></Friend>
-        ))}
-      </main>
+      <Friend friendsData={friendsData}></Friend>
     </div>
   );
 };
