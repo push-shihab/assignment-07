@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useContext } from "react";
-import call from "../../../public/assets/call.png";
-import text from "../../../public/assets/text.png";
-import video from "../../../public/assets/video.png";
+import call from "../../../../public/assets/call.png";
+import text from "../../../../public/assets/text.png";
+import video from "../../../../public/assets/video.png";
 import { callContext } from "@/utils/TimelineContext";
 
 const FriendAction = ({ specificFriend }) => {

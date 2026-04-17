@@ -5,15 +5,15 @@ import Link from "next/link";
 import { useContext, useEffect } from "react";
 
 const Friend = ({ friendsData }) => {
-  const { setFriendCounter } = useContext(OverviewCounter);
+  const { friendCounter, setFriendCounter } = useContext(OverviewCounter);
   useEffect(() => {
-    setFriendCounter(friendsData.length);
-  }, [friendsData.length, setFriendCounter]);
+    setFriendCounter(friendsData);
+  }, [friendsData, setFriendCounter, friendCounter]);
   return (
     <section className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-10 pt-8">
       {friendsData.map((friend) => (
         <Link
-          href={`/${friend.id}`}
+          href={`/friend/${friend.id}`}
           className="p-4 shadow-lg rounded-2xl border border-base-200 text-center flex flex-col items-center space-y-3"
           key={friend.id}
         >

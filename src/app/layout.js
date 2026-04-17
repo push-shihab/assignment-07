@@ -4,7 +4,7 @@ import { Geist } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import TimelineContext from "@/utils/TimelineContext";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, Zoom } from "react-toastify";
 
 const geist = Geist({
   weight: "400",
@@ -25,7 +25,18 @@ export default function RootLayout({ children }) {
             <Navbar></Navbar>
             {children}
             <Footer></Footer>
-            <ToastContainer />
+            <ToastContainer
+              position="top-center"
+              autoClose={1000}
+              hideProgressBar={false}
+              newestOnTop={true}
+              closeOnClick={true}
+              rtl={false}
+              draggable
+              pauseOnHover
+              theme="dark"
+              transition={Zoom}
+            />
           </OverviewContext>
         </TimelineContext>
       </body>

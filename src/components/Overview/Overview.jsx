@@ -4,24 +4,39 @@ import React, { useContext } from "react";
 
 const Overview = () => {
   const { friendCounter } = useContext(OverviewCounter);
+  const onTrack = friendCounter?.filter(
+    (friend) => friend.status === "on-track",
+  );
+  const needAttention = friendCounter?.filter(
+    (friend) => friend.status === "overdue",
+  );
+  const interactionThisMonth = friendCounter?.filter(
+    (friend) => friend.days_since_contact <= 30,
+  );
   return (
     <div className="card grid md:grid-cols-4 sm:grid-cols-2 gap-6 pb-15 border-b-2 border-gray-200 border-dashed">
       <div className="card-border text-center space-y-2 rounded-2xl shadow-xl py-10">
         <h1 className="text-[#244D3F] text-[32px] font-semibold">
-          {friendCounter}
+          {friendCounter.length}
         </h1>
         <p className="text-[#64748B]">Total Friends</p>
       </div>
       <div className="card-border text-center space-y-2 rounded-2xl shadow-xl py-10">
-        <h1 className="text-[#244D3F] text-[32px] font-semibold">10</h1>
+        <h1 className="text-[#244D3F] text-[32px] font-semibold">
+          {onTrack.length}
+        </h1>
         <p className="text-[#64748B]">On Track</p>
       </div>
       <div className="card-border text-center space-y-2 rounded-2xl shadow-xl py-10">
-        <h1 className="text-[#244D3F] text-[32px] font-semibold">10</h1>
+        <h1 className="text-[#244D3F] text-[32px] font-semibold">
+          {needAttention.length}
+        </h1>
         <p className="text-[#64748B]">Need Attention</p>
       </div>
       <div className="card-border text-center space-y-2 rounded-2xl shadow-xl py-10">
-        <h1 className="text-[#244D3F] text-[32px] font-semibold">10</h1>
+        <h1 className="text-[#244D3F] text-[32px] font-semibold">
+          {interactionThisMonth.length}
+        </h1>
         <p className="text-[#64748B]">Interactions This Month</p>
       </div>
     </div>

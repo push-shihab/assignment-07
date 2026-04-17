@@ -61,14 +61,14 @@ const FriendDetails = ({ params }) => {
               Preferred Email: <span className="text-gray-700">{email}</span>
             </span>
           </div>
-          <div className="font-medium py-4 text-center bg-white shadow-xl rounded-2xl border border-base-300 flex justify-center items-center gap-2">
+          <div className="font-medium cursor-pointer hover:bg-black hover:text-white transition ease-in-out duration-400 hover:scale-110 py-4 text-center bg-white shadow-xl rounded-2xl border border-base-300 flex justify-center items-center gap-2">
             <HiOutlineBellSnooze /> Snooze 2 weeks
           </div>
-          <div className="font-medium py-4 text-center bg-white shadow-xl rounded-2xl border border-base-300 flex justify-center items-center gap-2">
+          <div className="font-medium cursor-pointer hover:bg-black hover:text-white transition ease-in-out duration-400 hover:scale-110 py-4 text-center bg-white shadow-xl rounded-2xl border border-base-300 flex justify-center items-center gap-2">
             <IoIosArchive />
             Archive
           </div>
-          <div className="font-medium py-4 text-center bg-white shadow-xl rounded-2xl border border-base-300 text-red-500 flex justify-center items-center gap-2">
+          <div className="font-medium cursor-pointer hover:bg-red-500 hover:text-white transition ease-in-out duration-400 hover:scale-90 py-4 text-center bg-white shadow-xl rounded-2xl border border-base-300 text-red-500 flex justify-center items-center gap-2">
             <RiDeleteBin6Line /> Delete
           </div>
         </div>

@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 export const OverviewCounter = createContext();
 
 const OverviewContext = ({ children }) => {
-  const [friendCounter, setFriendCounter] = useState(0);
+  const [friendCounter, setFriendCounter] = useState([]);
   const count = { friendCounter, setFriendCounter };
   return (
     <div>

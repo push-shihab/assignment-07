@@ -19,17 +19,21 @@ const Footer = () => {
             Social Links
           </span>
           <div className="flex items-center justify-center gap-2">
-            <Image src={insta} alt="Instagram"></Image>
-            <Image src={fb} alt="Facebook"></Image>
-            <Image src={x} alt="Twitter"></Image>
+            <Image
+              className="cursor-pointer"
+              src={insta}
+              alt="Instagram"
+            ></Image>
+            <Image className="cursor-pointer" src={fb} alt="Facebook"></Image>
+            <Image className="cursor-pointer" src={x} alt="Twitter"></Image>
           </div>
         </div>
         <div className="py-8 text-[#b4b4b4] flex flex-wrap justify-between items-center">
           <span>© 2026 KeenKeeper. All rights reserved.</span>
           <span className="flex gap-8 flex-wrap">
-            <a>Privacy Policy</a>
-            <a>Terms of Service</a>
-            <a>Cookies</a>
+            <a className="cursor-pointer">Privacy Policy</a>
+            <a className="cursor-pointer">Terms of Service</a>
+            <a className="cursor-pointer">Cookies</a>
           </span>
         </div>
       </div>

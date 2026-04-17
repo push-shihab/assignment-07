@@ -9,7 +9,7 @@ const Intro = () => {
         the
         <br /> relationships that matter most.
       </p>
-      <button className="font-semibold p-2.5 rounded-md bg-[#244D3F] text-white">
+      <button className="font-semibold p-2.5 rounded-md bg-[#244D3F] text-white cursor-pointer">
         + Add a Friend
       </button>
     </div>

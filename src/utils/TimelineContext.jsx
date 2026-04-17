@@ -14,19 +14,19 @@ const TimelineContext = ({ children }) => {
   const handleCallCounter = (friend) => {
     setCallCounter([...callCounter, friend]);
     handleTimeline({ friend, time: new Date(), type: "call" });
-    toast.success(`Call with ${friend.name}`, { autoClose: 2000 });
+    toast.success(`Call with ${friend.name}`);
   };
   const [textCounter, setTextCounter] = useState([]);
   const handleTextCounter = (friend) => {
     setTextCounter([...textCounter, friend]);
     handleTimeline({ friend, time: new Date(), type: "text" });
-    toast.success(`Text with ${friend.name}`, { autoClose: 2000 });
+    toast.success(`Text with ${friend.name}`);
   };
   const [videoCounter, setVideoCounter] = useState([]);
   const handleVideoCounter = (friend) => {
     setVideoCounter([...videoCounter, friend]);
     handleTimeline({ friend, time: new Date(), type: "video" });
-    toast.success(`Video with ${friend.name}`, { autoClose: 2000 });
+    toast.success(`Video with ${friend.name}`);
   };
   const count = {
     timeline,
