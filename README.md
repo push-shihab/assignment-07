@@ -6,7 +6,7 @@
 
 ## 📖 Description
 
-KeenKeeper is a modern web application designed to help users track and manage their friendships effectively. It allows users to record and analyze interactions with different people over time. The app provides a detailed timeline of interactions along with powerful visual analytics, helping users better understand the nature and frequency of their social connections.
+KeenKeeper is an web app which is capable of tracking friendship with various people and can handle interations data. Interactions history is available in the timeline and has a great visual analytics to understand the type of interactions.
 
 ## 🚀 Technologies Used
 
@@ -17,20 +17,16 @@ KeenKeeper is a modern web application designed to help users track and manage t
 
 ## ✨ Features
 
-1. **Individual Friend Data**
-   Store and manage detailed information for each friend.
+1. All data of individual friend
 
-2. **Interaction History**
-   Keep a complete record of past interactions with friends in a structured timeline.
+2. History of interactions with friends.
 
-3. **Sorting Functionality**
-   Easily sort interaction history based on different types of interactions.
+3. Sort functionalities in the timeline section to sort out history according to the type of interactions.
 
-4. **Visual Analytics**
-   Gain insights through visual representations of interaction types to better understand relationship patterns.
+4. Analytics of type of interactions.
 
 ---
 
 ## 📌 Note
 
-**NB:** This project has no backend. It was built solely for practicing React and Next.js.
+**NB:** This project has no backend. It was built for practicing React and Next.js.
