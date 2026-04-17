@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# KeenKeeper
 
-## Getting Started
+## 📌 Project Name
 
-First, run the development server:
+**KeenKeeper**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📖 Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+KeenKeeper is a modern web application designed to help users track and manage their friendships effectively. It allows users to record and analyze interactions with different people over time. The app provides a detailed timeline of interactions along with powerful visual analytics, helping users better understand the nature and frequency of their social connections.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🚀 Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- React
+- Next.js
+- Tailwind CSS
+- DaisyUI
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+1. **Individual Friend Data**
+   Store and manage detailed information for each friend.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Interaction History**
+   Keep a complete record of past interactions with friends in a structured timeline.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Sorting Functionality**
+   Easily sort interaction history based on different types of interactions.
 
-## Deploy on Vercel
+4. **Visual Analytics**
+   Gain insights through visual representations of interaction types to better understand relationship patterns.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📌 Note
+
+**NB:** This project has no backend. It was built solely for practicing React and Next.js.

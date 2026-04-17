@@ -12,7 +12,7 @@ const geist = Geist({
 });
 
 export const metadata = {
-  title: "KinKeeper",
+  title: "KeenKeeper",
   description: "Friendship management tool",
 };
 
