@@ -1,7 +1,9 @@
 import Friend from "./Friend";
 
 const AllFriends = async () => {
-  const fetchData = await fetch("http://localhost:3000/friends.json");
+  const fetchData = await fetch(
+    "https://assignment-07-delta.vercel.app/friends.json",
+  );
   const friendsData = await fetchData.json();
   return (
     <div className="py-15">

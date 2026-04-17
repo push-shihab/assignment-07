@@ -7,9 +7,9 @@ import FriendAction from "./FriendAction";
 
 const FriendDetails = ({ params }) => {
   const { friendId } = use(params);
-  const fetchData = fetch("http://localhost:3000/friends.json").then((res) =>
-    res.json(),
-  );
+  const fetchData = fetch(
+    "https://assignment-07-delta.vercel.app/friends.json",
+  ).then((res) => res.json());
   const friendsData = use(fetchData);
   const specificFriend = friendsData.find(
     (friend) => friend.id === parseInt(friendId),
