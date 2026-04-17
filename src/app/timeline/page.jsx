@@ -58,50 +58,56 @@ const Timeline = () => {
             </li>
           </ul>
         </div>
-        <div className="space-y-6">
-          {sortedData.map((action, i) => (
-            <div
-              key={i}
-              className="flex gap-4 border border-base-300 p-4 bg-white rounded-2xl shadow-sm"
-            >
-              <Image
-                className="w-auto h-auto"
-                src={
-                  action.type === "call"
-                    ? call
-                    : action.type === "text"
-                      ? text
-                      : action.type === "video"
-                        ? video
-                        : ""
-                }
-                alt=""
-              />
-              <div>
-                <span className="font-medium text-[20px] text-[#244D3F]">
-                  {action.type == "call"
-                    ? "Call"
-                    : action.type == "text"
-                      ? "Text"
-                      : action.type == "video"
-                        ? "Video"
-                        : ""}
-                </span>
-                <span className="text-[#64748B]">
-                  {" "}
-                  with {action.friend.name}
-                </span>
-                <p className="text-[#64748B] font-medium">
-                  {new Date(action.time).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </p>
+        {sortedData.length === 0 ? (
+          <div className="h-[50vh] flex justify-center items-center uppercase text-4xl font-bold text-red-700">
+            No history yet!
+          </div>
+        ) : (
+          <div className="space-y-6">
+            {sortedData.map((action, i) => (
+              <div
+                key={i}
+                className="flex gap-4 border border-base-300 p-4 bg-white rounded-2xl shadow-sm"
+              >
+                <Image
+                  className="w-auto h-auto"
+                  src={
+                    action.type === "call"
+                      ? call
+                      : action.type === "text"
+                        ? text
+                        : action.type === "video"
+                          ? video
+                          : ""
+                  }
+                  alt=""
+                />
+                <div>
+                  <span className="font-medium text-[20px] text-[#244D3F]">
+                    {action.type == "call"
+                      ? "Call"
+                      : action.type == "text"
+                        ? "Text"
+                        : action.type == "video"
+                          ? "Video"
+                          : ""}
+                  </span>
+                  <span className="text-[#64748B]">
+                    {" "}
+                    with {action.friend.name}
+                  </span>
+                  <p className="text-[#64748B] font-medium">
+                    {new Date(action.time).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </section>
     </main>
   );

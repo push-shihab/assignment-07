@@ -26,7 +26,7 @@ const Navbar = () => {
         Timeline
       </Link>
       <Link
-        href={"/"}
+        href={"/stats"}
         className={`p-2.5 rounded-md flex items-center gap-1 ${pathname === "/stats" && "bg-[#244D3F] text-white"}`}
       >
         <MdOutlineQueryStats />

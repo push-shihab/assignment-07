@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export const callContext = createContext();
 
@@ -13,19 +14,19 @@ const TimelineContext = ({ children }) => {
   const handleCallCounter = (friend) => {
     setCallCounter([...callCounter, friend]);
     handleTimeline({ friend, time: new Date(), type: "call" });
-    alert(`Call with ${friend.name}`);
+    toast.success(`Call with ${friend.name}`, { autoClose: 2000 });
   };
   const [textCounter, setTextCounter] = useState([]);
   const handleTextCounter = (friend) => {
-    setCallCounter([...textCounter, friend]);
+    setTextCounter([...textCounter, friend]);
     handleTimeline({ friend, time: new Date(), type: "text" });
-    alert(`Text with ${friend.name}`);
+    toast.success(`Text with ${friend.name}`, { autoClose: 2000 });
   };
   const [videoCounter, setVideoCounter] = useState([]);
   const handleVideoCounter = (friend) => {
-    setCallCounter([...videoCounter, friend]);
+    setVideoCounter([...videoCounter, friend]);
     handleTimeline({ friend, time: new Date(), type: "video" });
-    alert(`Video with ${friend.name}`);
+    toast.success(`Video with ${friend.name}`, { autoClose: 2000 });
   };
   const count = {
     timeline,
