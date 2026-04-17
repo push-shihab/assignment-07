@@ -1,6 +1,6 @@
 "use client";
 import { callContext } from "@/utils/TimelineContext";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import call from "../../../public/assets/call.png";
 import text from "../../../public/assets/text.png";
 import video from "../../../public/assets/video.png";
@@ -9,11 +9,30 @@ import Image from "next/image";
 
 const Timeline = () => {
   const { timeline } = useContext(callContext);
+  const [sortedData, setSortedData] = useState(timeline);
+  const [sort, setSort] = useState("");
+  useEffect(() => {
+    if (sort) {
+      if (sort === "call") {
+        const sortByCall = timeline.filter((data) => data.type === "call");
+        setSortedData(sortByCall);
+      } else if (sort === "text") {
+        const sortByText = timeline.filter((data) => data.type === "text");
+        setSortedData(sortByText);
+      } else if (sort === "video") {
+        const sortByVideo = timeline.filter((data) => data.type === "video");
+        setSortedData(sortByVideo);
+      } else {
+        setSortedData(timeline);
+      }
+    }
+  }, [timeline, sort]);
+
   return (
     <main className="bg-[#F8FAFC]">
       <section className="container mx-auto py-20 space-y-6">
         <div>
-          <h1 className="font-bold text-5xl">Timeline: {timeline.length}</h1>
+          <h1 className="font-bold text-5xl">Timeline</h1>
         </div>
         <div className="dropdown dropdown-bottom">
           <div tabIndex={0} role="button" className="btn m-1">
@@ -25,26 +44,28 @@ const Timeline = () => {
             tabIndex="-1"
             className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
           >
-            <li>
+            <li onClick={() => setSort("all")}>
+              <a>All</a>
+            </li>
+            <li onClick={() => setSort("call")}>
               <a>Call</a>
             </li>
-            <li>
+            <li onClick={() => setSort("text")}>
               <a>Text</a>
             </li>
-            <li>
+            <li onClick={() => setSort("video")}>
               <a>Video</a>
             </li>
           </ul>
         </div>
         <div className="space-y-6">
-          {timeline.map((action, i) => (
+          {sortedData.map((action, i) => (
             <div
               key={i}
               className="flex gap-4 border border-base-300 p-4 bg-white rounded-2xl shadow-sm"
             >
               <Image
-                width="auto"
-                height="auto"
+                className="w-auto h-auto"
                 src={
                   action.type === "call"
                     ? call
