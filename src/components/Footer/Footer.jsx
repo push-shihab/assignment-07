@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="bg-[#244D3F]">
       <div className="container mx-auto">
         <div className="flex flex-col items-center space-y-4 pt-15 border-b border-gray-700 pb-8">
-          <Image src={logo} alt="logo"></Image>
+          <Image src={logo} alt="logo" loading="eager"></Image>
           <p className="text-[#ddd]">
             Your personal shelf of meaningful connections. Browse, tend, and
             nurture the relationships that matter most.

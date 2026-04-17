@@ -19,7 +19,7 @@ const Navbar = () => {
         Home
       </Link>
       <Link
-        href={"/"}
+        href={"/timeline"}
         className={`p-2.5 rounded-md flex items-center gap-1 ${pathname === "/timeline" && "bg-[#244D3F] text-white"}`}
       >
         <RiTimeLine />

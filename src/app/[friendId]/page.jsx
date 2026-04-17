@@ -1,16 +1,16 @@
 import Image from "next/image";
-import React from "react";
-import call from "../../../public/assets/call.png";
-import text from "../../../public/assets/text.png";
-import video from "../../../public/assets/video.png";
+import React, { use } from "react";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { IoIosArchive } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import FriendAction from "./FriendAction";
 
-const friendDetails = async ({ params }) => {
-  const { friendId } = await params;
-  const fetchData = await fetch("http://localhost:3000/friends.json");
-  const friendsData = await fetchData.json();
+const FriendDetails = ({ params }) => {
+  const { friendId } = use(params);
+  const fetchData = fetch("http://localhost:3000/friends.json").then((res) =>
+    res.json(),
+  );
+  const friendsData = use(fetchData);
   const specificFriend = friendsData.find(
     (friend) => friend.id === parseInt(friendId),
   );
@@ -113,17 +113,7 @@ const friendDetails = async ({ params }) => {
                 Quick Check-In
               </h3>
             </div>
-            <div className="grid sm:grid-cols-3 gap-4 pt-4">
-              <div className="p-4 bg-[#F8FAFC] shadow-xl rounded-2xl border border-base-300 flex flex-col items-center gap-2">
-                <Image src={call} alt="call"></Image>Call
-              </div>
-              <div className="p-4 bg-[#F8FAFC] shadow-xl rounded-2xl border border-base-300  flex flex-col items-center gap-2">
-                <Image src={text} alt="text"></Image>Text
-              </div>
-              <div className="p-4 bg-[#F8FAFC] shadow-xl rounded-2xl border border-base-300  flex flex-col items-center gap-2">
-                <Image src={video} alt="video"></Image>Video
-              </div>
-            </div>
+            <FriendAction specificFriend={specificFriend}></FriendAction>
           </div>
         </div>
       </section>
@@ -131,4 +121,4 @@ const friendDetails = async ({ params }) => {
   );
 };
 
-export default friendDetails;
+export default FriendDetails;

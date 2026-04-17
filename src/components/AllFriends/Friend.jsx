@@ -1,6 +1,7 @@
 "use client";
 import { OverviewCounter } from "@/utils/OverviewContext";
 import Image from "next/image";
+import Link from "next/link";
 import { useContext, useEffect } from "react";
 
 const Friend = ({ friendsData }) => {
@@ -11,7 +12,8 @@ const Friend = ({ friendsData }) => {
   return (
     <section className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-10 pt-8">
       {friendsData.map((friend) => (
-        <div
+        <Link
+          href={`/${friend.id}`}
           className="p-4 shadow-lg rounded-2xl border border-base-200 text-center flex flex-col items-center space-y-3"
           key={friend.id}
         >
@@ -45,7 +47,7 @@ const Friend = ({ friendsData }) => {
           >
             {friend.status}
           </span>
-        </div>
+        </Link>
       ))}
     </section>
   );
