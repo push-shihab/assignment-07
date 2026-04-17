@@ -4,16 +4,20 @@ import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { IoIosArchive } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import FriendAction from "./FriendAction";
+import { notFound } from "next/navigation";
 
-const FriendDetails = ({ params }) => {
-  const { friendId } = use(params);
-  const fetchData = fetch(
+const FriendDetails = async ({ params }) => {
+  const { friendId } = await params;
+  const fetchData = await fetch(
     "https://assignment-07-delta.vercel.app/friends.json",
-  ).then((res) => res.json());
-  const friendsData = use(fetchData);
+  );
+  const friendsData = await fetchData.json();
   const specificFriend = friendsData.find(
     (friend) => friend.id === parseInt(friendId),
   );
+  if (!specificFriend) {
+    notFound();
+  }
   const {
     picture,
     status,
